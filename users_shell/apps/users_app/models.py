@@ -10,4 +10,4 @@ class Users(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __repr__(self):
-        return f"fname: {self.first_name}, lname: {self.last_name}, email: {self.email}, age: {self.age}"
+        return f"ID: {self.id}, fname: {self.first_name}, lname: {self.last_name}, email: {self.email}, age: {self.age}"
