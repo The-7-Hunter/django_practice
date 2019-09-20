@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tv shows all</title>
+</head>
+<body>
+    <h1> all shows </h1>
+    {% for show in all_shows %}
+    <p>{{show.id}} --- {{show.title}} --- {{show.release_date}} --- 
+    <a href="{{show.id}}">view</a>
+    |||
+    <a href="{{show.id}}/edit">edit</a>
+    |||
+    <a href="{{show.id}}/delete">delete</a>
+    </p>
+    {% endfor %}
+    <a href="new_show_form"> ---- add new show ----</a>
+</body>
+</html>

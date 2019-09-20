@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Show Info</title>
+</head>
+<body>
+        <h1>Edit show info:</h1>
+    <form action="/{{show_info.id}}/edit_show" method="post">
+        {% csrf_token %}
+        Title:
+        <br>
+        <input type="text" name="title" value="{{show_info.title}}">
+        <br>
+        Network:
+        <br>
+        <input type="text" name="network" value="{{show_info.network}}">
+        <br>
+        Description:
+        <br>
+        <input type="text" name="description" value="{{show_info.description}}">
+        <br>
+        Release_date:
+        <br>
+        <input type="date" name="release_date" value="{{show_info.release_date}}">
+        <br>
+        <input type="submit" value="Edit">
+    </form>
+
+    <a href="/"> ===== Cancel ====</a>
+</body>
+</html>
